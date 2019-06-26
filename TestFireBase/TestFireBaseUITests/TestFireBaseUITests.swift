@@ -2,7 +2,7 @@
 //  TestFireBaseUITests.swift
 //  TestFireBaseUITests
 //
-//  Created by ST21235 on 2019/06/26.
+//  Created by He Wu on 2019/06/26.
 //  Copyright © 2019 He Wu. All rights reserved.
 //
 
