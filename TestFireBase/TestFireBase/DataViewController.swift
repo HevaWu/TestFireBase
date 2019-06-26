@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class DataViewController: UIViewController {
 
@@ -17,13 +18,12 @@ class DataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        Analytics.setScreenName(dataObject, screenClass: "\(dataObject) Class")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.dataLabel!.text = dataObject
     }
-
-
 }
 
