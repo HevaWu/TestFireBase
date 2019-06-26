@@ -1,0 +1,17 @@
+platform :ios, '11.0'
+
+inhibit_all_warnings!
+
+def import_pods
+    source 'https://github.com/CocoaPods/Specs.git'
+    pod 'Firebase/Core'
+end
+
+target 'TestFireBase' do
+    use_frameworks!
+    import_pods
+end
+
+post_install do |installer|
+  `find Pods -regex 'Pods/LCNotice.*\\.h' -print0 | xargs -0 sed -i '' 's/\\(<\\)LCNotice\\/\\(.*\\)\\(>\\)/\\"\\2\\"/'`
+end
