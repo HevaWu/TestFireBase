@@ -12,7 +12,10 @@ import FirebaseAnalytics
 class DataViewController: UIViewController {
 
     @IBOutlet weak var dataLabel: UILabel!
-    @IBOutlet var control: UIPageControl!
+    @IBAction func clickButton(_ sender: UIButton) {
+        // send click event
+        Analytics.logEvent("clickEvent", parameters: ["screen": dataObject])
+    }
     
     var dataObject: String = ""
 
@@ -21,7 +24,6 @@ class DataViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        control.addTarget(self, action: <#T##Selector#>, for: UIControl.Event.touchUpInside)
     }
 
     override func viewWillAppear(_ animated: Bool) {
